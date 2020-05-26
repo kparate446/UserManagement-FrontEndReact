@@ -1,0 +1,58 @@
+   /* justify-content: center; */
+   /* align-items: center; */
+   /* justify-content: center; */
+   /* flex-direction: column; */
+   
+   .card {
+       display: flex;
+       justify-content: center;
+       /* justify-self: center; */
+       align-items: center;
+       padding-top: 100px;
+       /* background-color: black; */
+   }
+   
+   .logincard {
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       width: 600px;
+       height: 480px;
+   }
+   
+   .avatar {
+       display: flex;
+       justify-content: center;
+   }
+   
+   .usernameLogin {
+       display: flex;
+       justify-content: center;
+       /* width: 600px; */
+   }
+   
+   .lock {
+       display: flex;
+       justify-content: center;
+       padding-top: 10px;
+   }
+   
+   .image {
+       display: flex;
+       justify-content: flex-end;
+   }
+   
+   .userregister {
+       padding: 3%;
+       justify-content: space-evenly;
+       flex-direction: column;
+   }
+   
+   .profileaccount {
+       display: flex;
+       justify-content: center;
+       background-color: #CCEAF3;
+       padding: 4%;
+       padding-bottom: 3%;
+       border-radius: 5px;
+   }
