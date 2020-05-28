@@ -13,7 +13,7 @@ import milogo from '../Assets/mi-logo.jpg';
 import {Avatar} from '@material-ui/core';
 import Switch from '@material-ui/core/Switch';
 import LockIcon from '@material-ui/icons/Lock';
-import version from '../Assets/version.png';
+// import version from '../Assets/version.png';
 
 class Login extends Component {
   constructor (props) {
@@ -40,6 +40,7 @@ class Login extends Component {
       .then (Response => {
         console.log (Response, 'User Login successfully!!');
         alert (`User Login successfully`);
+        this.props.history.push("/dashboard");
       })
       .catch (error => {
         alert (`User Not Login successfully`);
@@ -66,7 +67,7 @@ class Login extends Component {
                     />
                   </div>
                   <div>
-                    <h3> Login to your accout</h3>
+                    <h3 style={{color: 'grey'}}> Login to your accout</h3>
                   </div>
                   <div className="usernameLogin">
                     <TextField
@@ -138,7 +139,7 @@ class Login extends Component {
                       Login
                     </Button>
                   </div>
-                  <div className="lock">
+                  <div className="lock" onClick={() => this.props.history.push ('/forgotpassword')}>
                     <LockIcon style={{color: 'grey', width: '20px'}} />
                     Forgot password?
                   </div>

@@ -52,8 +52,9 @@ class ForgotPassword extends Component {
                 }}
               />
             </div>
+            <h2 style={{color:"grey"}}>User Management</h2>
             <div>
-              <h3> Login to your accout</h3>
+              <h3 style={{color:"grey"}}>Recover Password</h3>
             </div>
             <div className="profileaccount">
               Please enter your email address below to receive the password at your registered email.
@@ -95,7 +96,7 @@ class ForgotPassword extends Component {
             </div>
             <div className="lock">
               Know your password ?
-              Login
+             <div onClick={() => this.props.history.push ('/login')}>Login</div> 
             </div>
           </CardContent>
         </Card>
