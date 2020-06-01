@@ -19,3 +19,16 @@ export function forgotPassword (forgotPasswordDTO) {
     }
   );
 }
+
+export function addUser (registrationDto) {
+  return axios.post (
+    'http://localhost:8080/userapi/addusers',
+    registrationDto,
+    {
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+      },
+    }
+  );
+}
+

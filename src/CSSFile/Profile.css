@@ -1,0 +1,79 @@
+.partition{
+    display : flex;
+    /* justify-content: center; */
+    /* order:- 2 */
+    padding:5%
+}
+.partition1{
+    /* width:"9%"; */
+    display : flex;
+  /* justify-content: space-between; */
+    padding:2%;
+}
+
+.avatar{
+    width:"100% "
+}
+.info{
+    padding-Left: "10%";
+    display: flex;
+    flex-direction: column;
+}
+.userProfile {
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+}
+.general{
+    padding:"20%";
+    
+    display: flex;
+    /* margin-Left: "20%"; */
+    /* flex-direction: row-reverse; */
+    justify-content: space-around;
+    /* width:80%; */
+}
+.submitbutton{
+    display:flex;
+    justify-content: center;
+}
+
+
+@media only screen and (max-width: 600px) {
+.partition{
+    display : flex;
+    /* justify-content: center; */
+    /* order:- 2 */
+    padding:5%
+}
+.partition1{
+    /* width:"9%"; */
+    display : flex;
+  /* justify-content: space-between; */
+    padding:2%;
+}
+
+.avatar{
+    width:"100% "
+}
+.info{
+    padding-Left: "10%";
+    display: flex;
+    flex-direction: column;
+}
+.userProfile {
+    width: 95%;
+    display: flex;
+    justify-content: flex-end;
+}
+.general{
+    padding:"20%";
+    
+    display: flex;
+    /* margin-Left: "20%"; */
+    /* flex-direction: row-reverse; */
+    justify-content: space-around;
+    /* width:80%; */
+}
+
+}

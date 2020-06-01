@@ -37,8 +37,22 @@ class Login extends Component {
     console.log (user);
 
     userLogin (user)
-      .then (Response => {
+      .then (Response => {  
         console.log (Response, 'User Login successfully!!');
+        localStorage.setItem ('Token', Response.data.message);
+        localStorage.setItem ('FirstName', Response.data.data.firstName);
+        localStorage.setItem ('MiddleName', Response.data.data.middleName);
+        localStorage.setItem ('LastName', Response.data.data.lastName);
+        localStorage.setItem ('Email', Response.data.data.email);
+        localStorage.setItem ('UserRole', Response.data.data.userRole);
+        localStorage.setItem ('Gender', Response.data.data.gender);
+        localStorage.setItem ('BirthOfDate', Response.data.data.birthOfDate);
+        localStorage.setItem ('UserName', Response.data.data.userName);
+        localStorage.setItem ('LastLoginTime', Response.data.data.latestLoginTime);
+        localStorage.setItem ('country', Response.data.data.country);
+        localStorage.setItem ('Phone', Response.data.data.phoneNumber);
+        localStorage.setItem ('Address', Response.data.data.address);
+       
         alert (`User Login successfully`);
         this.props.history.push("/dashboard");
       })
