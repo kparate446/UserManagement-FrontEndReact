@@ -52,7 +52,8 @@ class Login extends Component {
         localStorage.setItem ('country', Response.data.data.country);
         localStorage.setItem ('Phone', Response.data.data.phoneNumber);
         localStorage.setItem ('Address', Response.data.data.address);
-       
+        localStorage.setItem ('Profile', Response.data.data.profilePic);
+
         alert (`User Login successfully`);
         this.props.history.push("/dashboard");
       })

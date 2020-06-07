@@ -11,7 +11,7 @@ import {
 import ListItemText from '@material-ui/core/ListItemText';
 import Button from '@material-ui/core/Button';
 
-// let LastLoginTime = localStorage.getItem ('LastLoginTime');
+let LastLoginTime = localStorage.getItem ('LastLoginTime');
 let Email = localStorage.getItem ('Email');
 let userName = localStorage.getItem ('UserName');
 let firstName = localStorage.getItem ('FirstName');
@@ -23,14 +23,14 @@ let country = localStorage.getItem ('country');
 let phone = localStorage.getItem ('Phone');
 let address = localStorage.getItem ('Address');
 
-   class Profile extends Component {
+class Profile extends Component {
     constructor (props) {
         super (props);
         this.state = {};
       }
   
  handleUpdateProfile = (props) => {
-    this.props.history.push("/dashboard/newuser");
+    this.props.history.push("/dashboard/admin");
   }
  handleProfileChange = () => {
     this.props.history.push ('/dashboard/profile');
@@ -60,6 +60,7 @@ let address = localStorage.getItem ('Address');
         <Card style={{padding:"2%"}}>
           <Toolbar>
             <Avatar
+                // src={localStorage.getItem ('Profile')}
                 title="Profile"
                 style={{
                   width:'100%',

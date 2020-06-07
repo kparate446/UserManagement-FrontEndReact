@@ -25,7 +25,7 @@ const theme = createMuiTheme ({
     MuiDrawer: {
       paper: {
         backgroundColor: '#1C2833',
-        marginTop: '55px',
+        marginTop: '62px',
         width: '20%',
         height: '1040%',
         color: '#E5E7E9'
@@ -81,16 +81,17 @@ render () {
     return (
       <div>
         <MuiThemeProvider theme={theme}>
-          <IconButton onClick={this.handleDrawer}>
+          <IconButton onClick={this.props.handleDrawer}>
             <NavigateBeforeIcon />
           </IconButton>
           <div>
-            <Drawer variant="persistent" anchor="left" open={open}>
+            <Drawer variant="persistent" anchor="left" open={this.props.open}>
               <List>
                 <ListItem
                   className="over"
                   button
                   key="Dashboard"
+                  onClick={() => this.props.history.push ('/dashboard/admin')}
                 >
                 <ListItemIcon>
                      <img
@@ -104,7 +105,9 @@ render () {
 
                 <ListItem 
                 className="over"
-                button key="Webpages">
+                button key="Webpages"
+                onClick={() => this.props.history.push ('/dashboard/admin')}
+                >
                   <ListItemIcon style={{color: '#E5E7E9 '}}>
                     <FileCopyIcon />
                   </ListItemIcon>
@@ -115,6 +118,7 @@ render () {
                   className="over"
                   button
                   key="Users"
+                  onClick={() => this.props.history.push ('/dashboard/userlist')}
                 >
                   <ListItemIcon style={{color: '#E5E7E9'}}>
                     <PersonIcon />
@@ -125,7 +129,32 @@ render () {
                 <ListItem
                   className="over"
                   button
+                  key="New User"
+                  onClick={() => this.props.history.push ('/dashboard/newuser')}
+                >
+                  <ListItemIcon style={{color: '#E5E7E9'}}>
+                    {/* <ListItemIcon/> */}
+                  </ListItemIcon>
+                  <ListItemText primary="New User" />
+                </ListItem>
+
+                <ListItem
+                  className="over"
+                  button
+                  key="Users List"
+                  onClick={() => this.props.history.push ('/dashboard/userslist')}
+                >
+                  <ListItemIcon style={{color: '#E5E7E9'}}>
+                    {/* <PersonIcon /> */}
+                  </ListItemIcon>
+                  <ListItemText primary="Users List" />
+                </ListItem>
+
+                <ListItem
+                  className="over"
+                  button
                   key="Profile"
+                  onClick={() => this.props.history.push ('/dashboard/profile')}
                 >
                   <ListItemIcon style={{color: '#E5E7E9'}}>
                     <PortraitIcon />

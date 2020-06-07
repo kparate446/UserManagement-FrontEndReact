@@ -32,3 +32,20 @@ export function addUser (registrationDto) {
   );
 }
 
+export function changeprofile (file, token) {
+  return axios.post ('http://localhost:8080/userapi/uploadedProfile', file, {
+    headers: {
+      'Content-Type': 'multipart/form-data',
+      token: token,
+    },
+  });
+}
+
+export function getAllUsers (token) {
+  return axios.get ('http://localhost:8080/userapi/getUsers', {
+    headers: {
+      'Content-Type': 'application/json; charset=utf-8',
+      token: token,
+    },
+  });
+}

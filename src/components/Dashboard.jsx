@@ -23,6 +23,7 @@ import ExpandLess from '@material-ui/icons/ExpandLess';
 import ExpandMore from '@material-ui/icons/ExpandMore';
 // import Profile from '../components/Profile';
 import Collapse from '@material-ui/core/Collapse';
+import MainMenu from '../components/Sidebar';
 
 const drawerWidth = 268;
 const useStyles = makeStyles (theme => ({
@@ -57,9 +58,10 @@ export default function ClippedDrawer (props) {
   const handleClick = () => {
     setOpen(!open);
   };
-
+  
+  
   const handleLoginChange = () => {
-    console.log (props);
+    // console.log (props);
     localStorage.removeItem ('Token');
     localStorage.removeItem ('FirstName');
     localStorage.removeItem ('MiddleName');
@@ -76,10 +78,18 @@ export default function ClippedDrawer (props) {
   const handleProfileChange = () => {
     props.history.push ('/dashboard/profile');
   }
-   const handleNewUserChange = () => {
+  const handleNewUserChange = () => {
     props.history.push ('/dashboard/newuser');
   }
+  const handleDashboardChange = () => {
+    props.history.push ('/dashboard/admin');
+  }
+  const handlUserListChange = () => {
+    props.history.push ('/dashboard/userslist');
+  }
 
+
+  
   return (
     <div className={classes.root}>
       <CssBaseline />
@@ -94,11 +104,12 @@ export default function ClippedDrawer (props) {
           </Typography>
 
           <div className="shift">
-            <NavigateBeforeIcon />
+            {/* <NavigateBeforeIcon /> */}
           </div>
 
           <div className="profile" onClick={handleProfileChange}>
             <Avatar
+              src={localStorage.getItem ('Profile')}
               title="Profile"
               style={{
                 // height:"0%",
@@ -121,7 +132,7 @@ export default function ClippedDrawer (props) {
         <div className={classes.drawerContainer}>
           <List>
             {['Dashboard'].map ((text, index) => (
-              <ListItem button key={text} >
+              <ListItem button key={text} onClick={handleDashboardChange} >
                 <ListItemIcon>
                   {/* <div className="image"> */}
                   <img
@@ -163,7 +174,7 @@ export default function ClippedDrawer (props) {
             <ListItemText primary="New User"/>
           </ListItem>
 
-          <ListItem button className={classes.nested}>
+          <ListItem button className={classes.nested} onClick={handlUserListChange}>
             <ListItemIcon>
               {/* <PortraitIcon /> */}
             </ListItemIcon>

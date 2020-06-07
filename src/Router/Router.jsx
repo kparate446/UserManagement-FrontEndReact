@@ -5,6 +5,8 @@ import ForgotPassword from '../components/ForgotPassword';
 import Dashboard from '../components/Dashboard';
 import Profile from '../components/Profile';
 import NewUsers from '../components/NewUsers';
+import Admin from '../components/Admin';
+import UsersList from '../components/UsersList';
 
 const Router = () => {
     return (
@@ -14,6 +16,8 @@ const Router = () => {
             <Route path="/dashboard"  component={Dashboard}/>
             <Route path="/dashboard/profile"  component={Profile}/>
             <Route path="/dashboard/newuser"  component={NewUsers}/>
+            <Route path="/dashboard/admin"  component={Admin}/>
+            <Route path="/dashboard/userslist"  component={UsersList}/>
         </BrowserRouter>
     );
 };

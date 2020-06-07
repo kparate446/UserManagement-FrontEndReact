@@ -10,6 +10,14 @@
   /* justify-content: space-between; */
     padding:2%;
 }
+.partition2{
+    /* width:"9%"; */
+    display : flex;
+  justify-content: space-between;
+    padding:2%;
+    margin-Top: 2%;
+    padding-Left: 20%;
+}
 
 .avatar{
     width:"100% "
@@ -37,7 +45,6 @@
     display:flex;
     justify-content: center;
 }
-
 
 @media only screen and (max-width: 600px) {
 .partition{
